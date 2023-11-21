@@ -23,14 +23,16 @@ export const Modal: React.FC<ModalProps> = ({
             onClose();
         }
     }
-    const [open, setOpen] = useState(false);
 
-    useEffect(()=>{
-        setOpen(isOpen);
-    }, []);
+    // SEEMS LIKE NOT NEEDED!
+    // const [open, setOpen] = useState(false);
+
+    // useEffect(()=>{
+    //     setOpen(isOpen);
+    // }, []);
 
     return (
-        <Dialog open={open} onOpenChange={onChange} >
+        <Dialog open={isOpen} onOpenChange={onChange} >
             <DialogContent>
                 <DialogHeader>
                     <DialogTitle>{title}</DialogTitle>
