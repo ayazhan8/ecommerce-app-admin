@@ -6,7 +6,6 @@ export async function POST(
     req: Request,
 ) {
     try {
-        console.log("entered api/stores");
         const { userId } = auth();
         const body = await req.json();
         
